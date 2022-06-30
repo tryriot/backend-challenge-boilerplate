@@ -44,15 +44,20 @@ Build a metrics logging and reporting service which will allow to retrieve and s
 
 ##### Metrics
 
-**Record metric Mutation**
+**Record metric method**
 
 Record the metric with the provided value for the given key and return the metric.
 
-**Metrics Query**
+**Get all metrics method**
 
 Returns all the metrics ordered by the highest sum.
 
-**Metric Query**
+Example:
+```json
+[{"key":"user-metrics","values":[12,3],"sum":15},{"key":"a","values":[3,7,2],"sum":12}]
+```
+
+**Get method**
 
 Return the metric for a given key. if no metric is found, return `null`.
 
@@ -74,4 +79,3 @@ Return the metric for a given key. if no metric is found, return `null`.
 - [ ] Implement the Get
 - [ ] Implement the Record
 
-** Note that the metric posted 2 hours ago is not included in the sum since we only care about data in the most recent hour for these APIs.
